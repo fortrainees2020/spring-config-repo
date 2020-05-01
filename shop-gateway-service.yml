@@ -4,20 +4,13 @@ spring:
     
 server :
   port : 8011
-zuul:
-  prefix: /app
   
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
     serviceUrl:
       defaultZone: http://localhost:8010/eureka/ 
   
-zuul:
-  routes:
-    shopforce:
-      service-id: shop-service
-      strip-prefix: false
+
 
   
